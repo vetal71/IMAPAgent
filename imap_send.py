@@ -1,3 +1,15 @@
+"""
+Алгоритм работы
+1. Соединение с сервером по протоколу IMAP
+2. Авторизация
+3. Получение списка папок с сервера
+4. Парсинг списка 
+5. Декодирование наименований папок
+
+"""
+
+
+
 from imaplib import IMAP4_SSL
 from pprint import pprint
 from imapclient import parse_response
@@ -13,7 +25,7 @@ server.login(USERNAME, PASSWORD)
 
 (typ, folder_data) = server.list()
 pprint(folder_data)
-
+"""
 folder_data = [item for item in folder_data if item not in ('', None)]
 
 ret = []
@@ -32,3 +44,4 @@ while parsed:
     ret.append((flags, delim, name))
 
 pprint(ret)
+"""
