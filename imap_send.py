@@ -12,7 +12,6 @@
 
 from imaplib import IMAP4_SSL
 from pprint import pprint
-from imapclient import parse_response
 
 long = int  # long is just int in python3
 
